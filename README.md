@@ -1,5 +1,5 @@
 # altmap
-/EST/
+**EST**
 
 See on minu magistritöö "Veebialuskaartide koostamine ETAKi andmete põhjal" toodete hoidla.
 
@@ -8,7 +8,7 @@ Magistritöö eesmärk oli uurida veebikaartide praktilise ülesehitamise lahend
 
 Selles hoidlas on kolm erinevat SLD stiilifaili WMS-teenuste jaoks ja MVT json stiilifail vektorpaani põhiste teenuste jaoks.
 
-/ENG/
+**ENG**
 
 This is the repository for the products of my masters thesis "Creating online base maps based on ETAK data".
 
@@ -16,4 +16,4 @@ The aim of my masters thesis was to study the practical solutions of web mapping
 
 In this repository are provided three different SLD configuration files for the WMS services as well as the MVT json style file for the vector tile based services.
 
-Joonatan Kama
+_Joonatan Kama_
