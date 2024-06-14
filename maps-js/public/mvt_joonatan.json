@@ -1,0 +1,646 @@
+{
+  "version": 8,
+  "name": "MVTosm",
+  "metadata": {
+    "mapbox:autocomposite": false,
+    "mapbox:type": "template",
+    "mapbox:groups": {},
+    "maputnik:renderer": "mbgljs"
+  },
+  "sources": {
+    "e_201_meri_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_201_meri_a"
+    },
+    "e_202_seisuveekogu_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_202_seisuveekogu_a"
+    },
+    "e_203_vooluveekogu_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_203_vooluveekogu_a"
+    },
+    "e_301_muu_kolvik_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_301_muu_kolvik_a"
+    },
+    "e_302_ou_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_302_ou_a"
+    },
+    "e_303_haritav_maa_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_303_haritav_maa_a"
+    },
+    "e_304_lage_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_304_lage_a"
+    },
+    "e_305_puittaimestik_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_305_puittaimestik_a"
+    },
+    "e_306_margala_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_306_margala_a"
+    },
+    "e_307_turbavali_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_307_turbavali_a"
+    },
+    "e_401_hoone_ka": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_401_hoone_ka"
+    },
+    "e_403_muu_rajatis_ka": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_403_muu_rajatis_ka"
+    },
+    "e_501_tee_a": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_501_tee_a"
+    },
+    "e_501_tee_j": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_501_tee_j"
+    },
+    "e_502_roobastee_j": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_502_roobastee_j"
+    },
+    "e_505_liikluskorralduslik_rajatis_ka": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_505_liikluskorralduslik_rajatis_ka"
+    },
+    "e_601_elektriliin_j": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_601_elektriliin_j"
+    },
+    "e_203_vooluveekogu_j": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_203_vooluveekogu_j"
+    },
+    "kolvik_250k": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/kolvik_250k"
+    },
+    "vooluvesi_250k": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/vooluvesi_250k"
+    },
+    "roobastee_250k": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/roobastee_250k"
+    },
+    "asustusyksus": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/asustusyksus"
+    },
+    "e_501_tee_j_lab": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/e_501_tee_j"
+    },
+    "openmaptiles": {
+      "type": "vector",
+      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=JY44pozjMZgvJeCRZjtl"
+    },
+    "maakond": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/maakond"
+    },
+    "omavalitsus": {
+      "type": "vector",
+      "url": "https://data-apps.landscape-geoinformatics.org/omavalitsus"
+    }
+  },
+  "sprite": "https://openmaptiles.github.io/positron-gl-style/sprite",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=JY44pozjMZgvJeCRZjtl",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {"background-color": "rgb(242,243,240)"}
+    },
+    {
+      "id": "250valismaa",
+      "type": "fill",
+      "source": "kolvik_250k",
+      "source-layer": "kolvik_250k",
+      "maxzoom": 11.5,
+      "filter": ["all", ["==", "tyyp", "Välismaa"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(203, 203, 203, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "250veekogu",
+      "type": "fill",
+      "source": "kolvik_250k",
+      "source-layer": "kolvik_250k",
+      "maxzoom": 11.5,
+      "filter": [
+        "any",
+        ["==", "tyyp", "Vooluveekogu"],
+        ["==", "tyyp", "Seisuveekogu"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(165, 191, 221, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "250Metsjapõõsastik",
+      "type": "fill",
+      "source": "kolvik_250k",
+      "source-layer": "kolvik_250k",
+      "maxzoom": 11.5,
+      "filter": [
+        "any",
+        [
+          "case",
+          ["==", ["typeof", ["get", "tyyp"]], "string"],
+          ["==", ["get", "tyyp"], "Mets ja põõsastik"],
+          false
+        ]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(172, 210, 156, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "250margala",
+      "type": "fill",
+      "source": "kolvik_250k",
+      "source-layer": "kolvik_250k",
+      "maxzoom": 11.5,
+      "filter": [
+        "any",
+        [
+          "case",
+          ["==", ["typeof", ["get", "tyyp"]], "string"],
+          ["==", ["get", "tyyp"], "Märgala"],
+          false
+        ]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(214, 217, 159, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "250asustus",
+      "type": "fill",
+      "source": "kolvik_250k",
+      "source-layer": "kolvik_250k",
+      "maxzoom": 11.5,
+      "filter": [
+        "any",
+        [
+          "case",
+          ["==", ["typeof", ["get", "tyyp"]], "string"],
+          ["==", ["get", "tyyp"], "Asustus"],
+          false
+        ]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(216, 216, 216, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "250lage",
+      "type": "fill",
+      "source": "kolvik_250k",
+      "source-layer": "kolvik_250k",
+      "maxzoom": 11.5,
+      "filter": [
+        "any",
+        [
+          "case",
+          ["==", ["typeof", ["get", "tyyp"]], "string"],
+          ["==", ["get", "tyyp"], "Lage ala"],
+          false
+        ]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(238, 240, 213, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_307_turbavali_a",
+      "type": "fill",
+      "source": "e_307_turbavali_a",
+      "source-layer": "e_307_turbavali_a",
+      "minzoom": 11.5,
+      "paint": {"fill-color": "rgba(196, 194, 194, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_306_margala_a",
+      "type": "fill",
+      "source": "e_306_margala_a",
+      "source-layer": "e_306_margala_a",
+      "minzoom": 11.5,
+      "paint": {"fill-color": "rgba(214, 217, 159, 1)"}
+    },
+    {
+      "id": "e_305_puittaimestik_a",
+      "type": "fill",
+      "source": "e_305_puittaimestik_a",
+      "source-layer": "e_305_puittaimestik_a",
+      "minzoom": 11.5,
+      "paint": {"fill-color": "rgba(172, 210, 156, 1)"}
+    },
+    {
+      "id": "e_304_lage_a",
+      "type": "fill",
+      "source": "e_304_lage_a",
+      "source-layer": "e_304_lage_a",
+      "minzoom": 11.5,
+      "paint": {"fill-color": "rgba(205, 235, 176, 1)"}
+    },
+    {
+      "id": "e_303_haritav_maa_a",
+      "type": "fill",
+      "source": "e_303_haritav_maa_a",
+      "source-layer": "e_303_haritav_maa_a",
+      "minzoom": 11.5,
+      "paint": {"fill-color": "rgba(238, 240, 213, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_301_muu_kolvik_a",
+      "type": "fill",
+      "source": "e_301_muu_kolvik_a",
+      "source-layer": "e_301_muu_kolvik_a",
+      "minzoom": 11.5,
+      "paint": {"fill-color": "rgba(205, 247, 201, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_302_ou_a",
+      "type": "fill",
+      "source": "e_302_ou_a",
+      "source-layer": "e_302_ou_a",
+      "minzoom": 11.5,
+      "paint": {"fill-color": "rgba(216, 216, 216, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_201_meri_a",
+      "type": "fill",
+      "source": "e_201_meri_a",
+      "source-layer": "e_201_meri_a",
+      "paint": {"fill-color": "rgba(165, 191, 221, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_203_vooluveekogu_a",
+      "type": "fill",
+      "source": "e_203_vooluveekogu_a",
+      "source-layer": "e_203_vooluveekogu_a",
+      "minzoom": 11.5,
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(165, 191, 221, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_203_vooluveekogu_j",
+      "type": "line",
+      "source": "e_203_vooluveekogu_j",
+      "source-layer": "e_203_vooluveekogu_j",
+      "minzoom": 14.5,
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(165, 191, 221, 1)"}
+    },
+    {
+      "id": "e_202_seisuveekogu_a",
+      "type": "fill",
+      "source": "e_202_seisuveekogu_a",
+      "source-layer": "e_202_seisuveekogu_a",
+      "minzoom": 11.5,
+      "paint": {"fill-color": "rgba(165, 191, 221, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_501_tee_a",
+      "type": "fill",
+      "source": "e_501_tee_a",
+      "source-layer": "e_501_tee_a",
+      "minzoom": 11.5,
+      "paint": {"fill-color": "rgba(229, 229, 229, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_403_muu_rajatis_ka",
+      "type": "fill",
+      "source": "e_403_muu_rajatis_ka",
+      "source-layer": "e_403_muu_rajatis_ka",
+      "minzoom": 14,
+      "paint": {"fill-color": "rgba(217, 217, 217, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_505_liikluskorralduslik_rajatis_ka",
+      "type": "fill",
+      "source": "e_505_liikluskorralduslik_rajatis_ka",
+      "source-layer": "e_505_liikluskorralduslik_rajatis_ka",
+      "minzoom": 11.5,
+      "paint": {"fill-color": "rgba(230, 230, 230, 1)"}
+    },
+    {
+      "id": "e_401_hoone_ka",
+      "type": "fill",
+      "source": "e_401_hoone_ka",
+      "source-layer": "e_401_hoone_ka",
+      "minzoom": 14.5,
+      "maxzoom": 24,
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(218, 218, 218, 1)",
+        "fill-antialias": true,
+        "fill-outline-color": "rgba(189, 189, 189, 1)"
+      }
+    },
+    {
+      "id": "e_401_hoone_ka-copy",
+      "type": "fill",
+      "source": "e_401_hoone_ka",
+      "source-layer": "e_401_hoone_ka",
+      "minzoom": 13.5,
+      "maxzoom": 14.5,
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(210, 210, 210, 1)", "fill-antialias": true}
+    },
+    {
+      "id": "e_501_tee_7080",
+      "type": "line",
+      "source": "e_501_tee_j",
+      "source-layer": "e_501_tee_j",
+      "minzoom": 15,
+      "filter": ["any", ["==", "tyyp", 80], ["==", "tyyp", 70]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {"line-color": "rgba(255, 255, 255, 1)"}
+    },
+    {
+      "id": "e_501_tee_60",
+      "type": "line",
+      "source": "e_501_tee_j",
+      "source-layer": "e_501_tee_j",
+      "minzoom": 14.5,
+      "filter": ["any", ["==", "tyyp", 60]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {"line-color": "rgba(255, 255, 255, 1)", "line-width": 2}
+    },
+    {
+      "id": "e_501_tee_50",
+      "type": "line",
+      "source": "e_501_tee_j",
+      "source-layer": "e_501_tee_j",
+      "minzoom": 13,
+      "maxzoom": 24,
+      "filter": ["any", ["==", "tyyp", 50]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          13,
+          1,
+          15,
+          2,
+          20,
+          50
+        ]
+      }
+    },
+    {
+      "id": "e_501_tee_40",
+      "type": "line",
+      "source": "e_501_tee_j",
+      "source-layer": "e_501_tee_j",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "filter": ["any", ["==", "tyyp", 40]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 255, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          12,
+          3,
+          15,
+          3,
+          20,
+          50
+        ]
+      }
+    },
+    {
+      "id": "e_501_tee_30",
+      "type": "line",
+      "source": "e_501_tee_j",
+      "source-layer": "e_501_tee_j",
+      "minzoom": 11,
+      "maxzoom": 24,
+      "filter": ["any", ["==", "tyyp", 30]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 182, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          11,
+          3,
+          15,
+          3,
+          20,
+          60
+        ]
+      }
+    },
+    {
+      "id": "e_501_tee_20",
+      "type": "line",
+      "source": "e_501_tee_j",
+      "source-layer": "e_501_tee_j",
+      "minzoom": 9,
+      "maxzoom": 24,
+      "filter": ["any", ["==", "tyyp", 20]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(255, 255, 179, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          9,
+          2,
+          15,
+          3,
+          20,
+          70
+        ]
+      }
+    },
+    {
+      "id": "e_501_tee_10",
+      "type": "line",
+      "source": "e_501_tee_j",
+      "source-layer": "e_501_tee_j",
+      "minzoom": 7,
+      "maxzoom": 24,
+      "filter": ["any", ["==", "tyyp", 10]],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "rgba(241, 173, 156, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          7,
+          3,
+          14,
+          5,
+          20,
+          120
+        ]
+      }
+    },
+    {
+      "id": "e_502_roobaskorval",
+      "type": "line",
+      "source": "e_502_roobastee_j",
+      "source-layer": "e_502_roobastee_j",
+      "minzoom": 14.5,
+      "layout": {"line-join": "bevel", "line-cap": "square"},
+      "paint": {"line-color": "rgba(152, 152, 152, 1)"}
+    },
+    {
+      "id": "e_502_roobaspohisuur-copy",
+      "type": "line",
+      "source": "e_502_roobastee_j",
+      "source-layer": "e_502_roobastee_j",
+      "minzoom": 7,
+      "maxzoom": 14.5,
+      "filter": ["all", ["==", "tahtsus", 10]],
+      "layout": {"line-join": "bevel", "line-cap": "square"},
+      "paint": {"line-color": "rgba(152, 152, 152, 1)"}
+    },
+    {
+      "id": "e_502_roobaspohi",
+      "type": "line",
+      "source": "e_502_roobastee_j",
+      "source-layer": "e_502_roobastee_j",
+      "minzoom": 14.5,
+      "maxzoom": 24,
+      "filter": ["all", ["==", "tahtsus", 10]],
+      "layout": {"line-join": "bevel", "line-cap": "square"},
+      "paint": {
+        "line-color": "rgba(152, 152, 152, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.5],
+          ["zoom"],
+          14.5,
+          2,
+          16,
+          4,
+          20,
+          40
+        ],
+        "line-translate-anchor": "map"
+      }
+    },
+    {
+      "id": "e_601_elektriliin_j",
+      "type": "line",
+      "source": "e_601_elektriliin_j",
+      "source-layer": "e_601_elektriliin_j",
+      "minzoom": 15,
+      "paint": {"line-color": "rgba(178, 178, 178, 1)", "line-width": 0.5}
+    },
+    {
+      "id": "250vooluvesi",
+      "type": "line",
+      "source": "vooluvesi_250k",
+      "source-layer": "vooluvesi_250k",
+      "minzoom": 8,
+      "maxzoom": 14.5,
+      "paint": {"line-color": "rgba(165, 191, 221, 1)"}
+    },
+    {
+      "id": "transname",
+      "type": "symbol",
+      "source": "e_501_tee_j",
+      "source-layer": "e_501_tee_j",
+      "minzoom": 15,
+      "layout": {
+        "text-field": "{nimetus}",
+        "symbol-placement": "line",
+        "text-size": 14
+      },
+      "paint": {"text-color": "#4d4d4d"}
+    },
+    {
+      "id": "aadress",
+      "type": "symbol",
+      "source": "e_401_hoone_ka",
+      "source-layer": "e_401_hoone_ka",
+      "minzoom": 18,
+      "layout": {"text-field": "{ads_lahiaadress}", "visibility": "visible"},
+      "paint": {"text-color": "#676767"}
+    },
+    {
+      "id": "vooluvesilabels",
+      "type": "symbol",
+      "source": "e_203_vooluveekogu_j",
+      "source-layer": "e_203_vooluveekogu_j",
+      "minzoom": 14.5,
+      "filter": ["all", ["==", "tyyp_t", "Jõgi"]],
+      "layout": {
+        "text-field": "{nimetus}",
+        "symbol-placement": "line",
+        "symbol-spacing": 500,
+        "text-font": ["PT Serif Italic"]
+      },
+      "paint": {"text-color": "#7397bf"}
+    },
+    {
+      "id": "seisuvesilabels",
+      "type": "symbol",
+      "source": "e_202_seisuveekogu_a",
+      "source-layer": "e_202_seisuveekogu_a",
+      "minzoom": 14.5,
+      "layout": {
+        "text-field": "{nimetus}",
+        "text-font": ["PT Serif Italic"],
+        "symbol-spacing": 500,
+        "symbol-placement": "point",
+        "symbol-avoid-edges": false,
+        "symbol-z-order": "auto",
+        "text-pitch-alignment": "auto",
+        "text-ignore-placement": false
+      },
+      "paint": {"text-color": "#7397bf"}
+    }
+  ],
+  "id": "etak"
+}

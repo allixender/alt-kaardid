@@ -1,0 +1,60 @@
+{
+  "version": 8,
+  "name": "BaseExampeAlex",
+  "metadata": {
+    "mapbox:autocomposite": false,
+    "mapbox:type": "template",
+    "mapbox:groups": {
+    },
+    "maputnik:renderer": "mbgljs"
+  },
+  "sources": {
+    "e_201_meri_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_201_meri_a"},
+    "e_202_seisuveekogu_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_202_seisuveekogu_a"},
+    "e_203_vooluveekogu_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_203_vooluveekogu_a"},
+    "e_301_muu_kolvik_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_301_muu_kolvik_a"},
+    "e_302_ou_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_302_ou_a"},
+    "e_303_haritav_maa_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_303_haritav_maa_a"},
+    "e_304_lage_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_304_lage_a"},
+    "e_305_puittaimestik_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_305_puittaimestik_a"},
+    "e_306_margala_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_306_margala_a"},
+    "e_307_turbavali_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_307_turbavali_a"},
+    "e_401_hoone_ka" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_401_hoone_ka"},
+    "e_403_muu_rajatis_ka" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_403_muu_rajatis_ka"},
+    "e_501_tee_a" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_501_tee_a"},
+    "e_501_tee_j" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_501_tee_j"},
+    "e_502_roobastee_j" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_502_roobastee_j"},
+    "e_505_liikluskorralduslik_rajatis_ka" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_505_liikluskorralduslik_rajatis_ka"},
+    "e_601_elektriliin_j" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_601_elektriliin_j"},
+    "e_203_vooluveekogu_j" : {"type": "vector", "url": "https://data-apps.landscape-geoinformatics.org/e_203_vooluveekogu_j"}
+  },
+  "sprite": "https://openmaptiles.github.io/positron-gl-style/sprite",
+  "glyphs": "https://data-apps.landscape-geoinformatics.org/fonts/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "layout": {"visibility": "visible"},
+      "paint": {"background-color": "rgb(242,243,240)"}
+    },
+    {"id": "e_201_meri_a", "type": "fill", "source": "e_201_meri_a", "source-layer": "e_201_meri_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_202_seisuveekogu_a", "type": "fill", "source": "e_202_seisuveekogu_a", "source-layer": "e_202_seisuveekogu_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_203_vooluveekogu_a", "type": "fill", "source": "e_203_vooluveekogu_a", "source-layer": "e_203_vooluveekogu_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_301_muu_kolvik_a", "type": "fill", "source": "e_301_muu_kolvik_a", "source-layer": "e_301_muu_kolvik_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_302_ou_a", "type": "fill", "source": "e_302_ou_a", "source-layer": "e_302_ou_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_303_haritav_maa_a", "type": "fill", "source": "e_303_haritav_maa_a", "source-layer": "e_303_haritav_maa_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_304_lage_a", "type": "fill", "source": "e_304_lage_a", "source-layer": "e_304_lage_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_305_puittaimestik_a", "type": "fill", "source": "e_305_puittaimestik_a", "source-layer": "e_305_puittaimestik_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_306_margala_a", "type": "fill", "source": "e_306_margala_a", "source-layer": "e_306_margala_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_307_turbavali_a", "type": "fill", "source": "e_307_turbavali_a", "source-layer": "e_307_turbavali_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_401_hoone_ka", "type": "fill", "source": "e_401_hoone_ka", "source-layer": "e_401_hoone_ka", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_403_muu_rajatis_ka", "type": "fill", "source": "e_403_muu_rajatis_ka", "source-layer": "e_403_muu_rajatis_ka", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_501_tee_a", "type": "fill", "source": "e_501_tee_a", "source-layer": "e_501_tee_a", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_501_tee_j", "type": "fill", "source": "e_501_tee_j", "source-layer": "e_501_tee_j", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_502_roobastee_j", "type": "fill", "source": "e_502_roobastee_j", "source-layer": "e_502_roobastee_j", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_505_liikluskorralduslik_rajatis_ka", "type": "fill", "source": "e_505_liikluskorralduslik_rajatis_ka", "source-layer": "e_505_liikluskorralduslik_rajatis_ka", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_601_elektriliin_j", "type": "fill", "source": "e_601_elektriliin_j", "source-layer": "e_601_elektriliin_j", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}},
+{"id": "e_203_vooluveekogu_j", "type": "fill", "source": "e_203_vooluveekogu_j", "source-layer": "e_203_vooluveekogu_j", "paint": {"fill-color": "rgba(38, 99, 132, 1)"}}
+],
+  "id": "etak"
+}
